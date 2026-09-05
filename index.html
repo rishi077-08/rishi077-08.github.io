@@ -1,10 +1,109 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Subdomain Takeover POC</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Alert - Subdomain Takeover</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 800px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.2);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+        }
+        h1 {
+            color: #ff6b6b;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .badge {
+            background: #ff6b6b;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            display: inline-block;
+            margin: 15px 0;
+            font-weight: bold;
+        }
+        .info-box {
+            background: rgba(0,0,0,0.3);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: left;
+        }
+        .info-box h3 {
+            color: #4ecdc4;
+            margin-top: 0;
+        }
+        .researcher {
+            color: #ffe66d;
+            font-size: 1.2em;
+            margin-top: 30px;
+        }
+        .footer {
+            margin-top: 30px;
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+    </style>
 </head>
 <body>
-    <h1>SUBDOMAIN TAKEOVER POC</h1>
-    <p>This is a proof of concept demonstrating the subdomain takeover vulnerability.</p>
+    <div class="container">
+        <h1>⚠️ SUBDOMAIN TAKEOVER</h1>
+        <div class="badge">VULNERABILITY DETECTED</div>
+        
+        <p>This subdomain has been successfully taken over as a proof of concept.</p>
+        
+        <div class="info-box">
+            <h3>📋 Vulnerability Details</h3>
+            <ul>
+                <li><strong>Subdomain:</strong> space-apps-nasa-gov.spaceappschallenge.org</li>
+                <li><strong>Type:</strong> Subdomain Takeover (CNAME Misconfiguration)</li>
+                <li><strong>Severity:</strong> High</li>
+                <li><strong>Status:</strong> Successfully Demonstrated</li>
+            </ul>
+        </div>
+        
+        <div class="info-box">
+            <h3>⚡ Impact</h3>
+            <p>An attacker could host malicious content, steal cookies, phish users, or damage the organization's reputation through this subdomain.</p>
+        </div>
+        
+        <div class="info-box">
+            <h3>✅ Recommended Fix</h3>
+            <ol>
+                <li>Remove the CNAME record pointing to GitHub Pages</li>
+                <li>Or claim the repository name on GitHub</li>
+                <li>Audit all DNS records for similar misconfigurations</li>
+                <li>Implement subdomain monitoring</li>
+            </ol>
+        </div>
+        
+        <div class="researcher">
+            👨‍💻 Responsible Disclosure by: <strong>Rishi Raj Paswan</strong>
+        </div>
+        
+        <div class="footer">
+            <p>This is a security research demonstration. No malicious activity intended.</p>
+            <p>Reported in good faith for remediation purposes.</p>
+        </div>
+    </div>
 </body>
 </html>
